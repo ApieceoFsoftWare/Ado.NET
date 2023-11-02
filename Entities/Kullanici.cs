@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    internal class Kullanici
+    public class Kullanici
     {
+        public Guid KullaniciID { get; set; }
+        public string KullaniciAdi{ get; set; }
+        public string Sifre {  get; set; }
     }
 }
