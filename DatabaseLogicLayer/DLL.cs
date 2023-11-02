@@ -19,7 +19,7 @@ namespace DatabaseLogicLayer
 
         public DLL()
         {
-            _conn = new SqlConnection("Data Source=.; initial catalog = TelefonRehberi;  Integrated Security=True;");
+            _conn = new SqlConnection(@"Server=DESKTOP-FQQ05H7\SQLEXPRESS;Database=TelefonRehberi;Integrated Security=True;");
         }
         public void BaglantiAyarla()
         {
@@ -38,6 +38,8 @@ namespace DatabaseLogicLayer
             {
                 _command = new SqlCommand("SELECT Count(*) FROM Kullanici WHERE KullaniciAdi = @KullaniciAdi AND Sifre = @Sifre", _conn);
                 BaglantiAyarla();
+                _command.Parameters.Add(@"KullaniciAdi",SqlDbType.NVarChar).Value = kullanici.KullaniciAdi;
+                _command.Parameters.Add(@"Sifre",SqlDbType.NVarChar).Value = kullanici.Sifre;
                 ReturnValues = (int)_command.ExecuteScalar();
 
             }

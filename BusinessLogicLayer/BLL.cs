@@ -17,7 +17,7 @@ namespace BusinessLogicLayer
         }
         public int SistemKontrol(string kullaniciAdi, string sifre)
         {
-            if(!string.IsNullOrEmpty(kullaniciAdi)&& !string.IsNullOrEmpty(sifre))
+            if(!string.IsNullOrEmpty(kullaniciAdi) && !string.IsNullOrEmpty(sifre))
             {
                 return dll.SistemKontrol(new Entities.Kullanici()
                 {
@@ -27,7 +27,6 @@ namespace BusinessLogicLayer
             }
             else
             {
-                
                 return -1;
             }
         }
