@@ -16,5 +16,15 @@ namespace TelefonRehberi
         {
             InitializeComponent();
         }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
