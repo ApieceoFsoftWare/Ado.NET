@@ -19,5 +19,10 @@ namespace Entities
         public string   Adres               { get; set; }
         public string   Aciklama            { get; set; }
 
+        public override string ToString()
+        {
+            return $"{Isim} {Soyisim}";
+        }
+
     }
 }

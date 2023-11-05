@@ -1,4 +1,5 @@
 ﻿using Entities;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,10 +17,18 @@ namespace DatabaseLogicLayer
         SqlDataReader _reader;
 
         int ReturnValues;
+        string computerName = Environment.MachineName;
 
         public DLL()
         {
-            _conn = new SqlConnection(@"Server=DESKTOP-FQQ05H7\SQLEXPRESS;Database=TelefonRehberi;Integrated Security=True;");
+            try
+            {
+            _conn = new SqlConnection($"Server={computerName}\\SQLEXPRESS;Database=TelefonRehberi;Integrated Security=True;");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
         public void BaglantiAyarla()
         {
@@ -45,7 +54,7 @@ namespace DatabaseLogicLayer
             }
             catch(Exception ex) 
             {
-
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -60,7 +69,7 @@ namespace DatabaseLogicLayer
                 _command = new SqlCommand("INSERT INTO Rehber (ID, Isim, Soyisim, TelefonNumarasiI, TelefonNumarasiII, TelefonNumarasiIII, EmailAdres, WebAdres, Adres, Aciklama)" +
                                           "VALUES(@ID, @Isim, @Soyisim, @TelefonNumarasiI, @TelefonNumarasiII, @TelefonNumarasiIII, @EmailAdres, @WebAdres, @Adres, @Aciklama)", _conn);
                 _command.Parameters.Add("@ID",                  SqlDbType.UniqueIdentifier).Value = rehber.ID;
-                _command.Parameters.Add("@Isım",                SqlDbType.NVarChar).Value = rehber.Isim;
+                _command.Parameters.Add("@Isim",                SqlDbType.NVarChar).Value = rehber.Isim;
                 _command.Parameters.Add("@Soyisim",             SqlDbType.NVarChar).Value = rehber.Soyisim;
                 _command.Parameters.Add("@TelefonNumarasiI",    SqlDbType.NVarChar).Value = rehber.TelefonNumarasiI;
                 _command.Parameters.Add("@TelefonNumarasiII",   SqlDbType.NVarChar).Value = rehber.TelefonNumarasiII;
@@ -75,9 +84,10 @@ namespace DatabaseLogicLayer
                 ReturnValues = _command.ExecuteNonQuery();     // Hazırladığımız SQL Sorgusunu SQL SERVER'a göndereceğiz...
                                                                // Burada yazdığımız komut kaç tane row etkilendiyse
                                                                // bunu bize interger olarak geri dönüyor.        
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
-
+                Console.WriteLine(ex.Message);
             }
             finally { BaglantiAyarla(); }
             return ReturnValues;
@@ -87,26 +97,27 @@ namespace DatabaseLogicLayer
             try
             {
                 _command = new SqlCommand(@"UPDATE Rehber 
+                                            SET
                                             Isim = @Isim,
                                             Soyisim = @Soyisim,
                                             TelefonNumarasiI = @TelefonNumarasiI,
-                                            TelefonNumarasiI = @TelefonNumarasiII,
-                                            TelefonNumarasiI = @TelefonNumarasiIII,
+                                            TelefonNumarasiII = @TelefonNumarasiII,
+                                            TelefonNumarasiIII = @TelefonNumarasiIII,
                                             EmailAdres = @EmailAdres,
                                             Adres = @Adres,
                                             Aciklama = @Aciklama
                                             WHERE ID = @ID
                                         ",_conn);
-                _command.Parameters.Add("@ID", SqlDbType.UniqueIdentifier).Value = rehber.ID;
-                _command.Parameters.Add("@Isım", SqlDbType.NVarChar).Value = rehber.Isim;
-                _command.Parameters.Add("@Soyisim", SqlDbType.NVarChar).Value = rehber.Soyisim;
-                _command.Parameters.Add("@TelefonNumarasiI", SqlDbType.NVarChar).Value = rehber.TelefonNumarasiI;
-                _command.Parameters.Add("@TelefonNumarasiII", SqlDbType.NVarChar).Value = rehber.TelefonNumarasiII;
-                _command.Parameters.Add("@TelefonNumarasiIII", SqlDbType.NVarChar).Value = rehber.TelefonNumarasiIII;
-                _command.Parameters.Add("@EmailAdres", SqlDbType.NVarChar).Value = rehber.EmailAdres;
-                _command.Parameters.Add("@WebAdres", SqlDbType.NVarChar).Value = rehber.WebAdres;
-                _command.Parameters.Add("@Adres", SqlDbType.NVarChar).Value = rehber.Adres;
-                _command.Parameters.Add("@Aciklama", SqlDbType.NVarChar).Value = rehber.Aciklama;
+                _command.Parameters.Add("@ID",                  SqlDbType.UniqueIdentifier).Value = rehber.ID;
+                _command.Parameters.Add("@Isim",                SqlDbType.NVarChar).Value = rehber.Isim;
+                _command.Parameters.Add("@Soyisim",             SqlDbType.NVarChar).Value = rehber.Soyisim;
+                _command.Parameters.Add("@TelefonNumarasiI",    SqlDbType.NVarChar).Value = rehber.TelefonNumarasiI;
+                _command.Parameters.Add("@TelefonNumarasiII",   SqlDbType.NVarChar).Value = rehber.TelefonNumarasiII;
+                _command.Parameters.Add("@TelefonNumarasiIII",  SqlDbType.NVarChar).Value = rehber.TelefonNumarasiIII;
+                _command.Parameters.Add("@EmailAdres",          SqlDbType.NVarChar).Value = rehber.EmailAdres;
+                _command.Parameters.Add("@WebAdres",            SqlDbType.NVarChar).Value = rehber.WebAdres;
+                _command.Parameters.Add("@Adres",               SqlDbType.NVarChar).Value = rehber.Adres;
+                _command.Parameters.Add("@Aciklama",            SqlDbType.NVarChar).Value = rehber.Aciklama;
 
                 BaglantiAyarla();               // Insert cümlemizi ayarladıktan sonra bu şekilde database ile olan bağlantıyı açacağız...
 

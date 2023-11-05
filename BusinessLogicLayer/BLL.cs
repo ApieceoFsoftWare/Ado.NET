@@ -118,9 +118,9 @@ namespace BusinessLogicLayer
                 }
                 reader.Close();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                Console.WriteLine(ex.Message);
             }
             finally
             {

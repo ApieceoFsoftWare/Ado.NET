@@ -28,48 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lst_liste = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txt_Email_New = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_Description_New = new System.Windows.Forms.TextBox();
+            this.txt_Phone3_New = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_Address_New = new System.Windows.Forms.TextBox();
+            this.txt_Phone2_New = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txt_WebAddress_New = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_Phone1_New = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_Surname_New = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_Name_New = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txt_Email_Update = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txt_Description_Update = new System.Windows.Forms.TextBox();
+            this.txt_Phone3_Update = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txt_Address_Update = new System.Windows.Forms.TextBox();
+            this.txt_Phone2_Update = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txt_WebAddress_Update = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txt_Phone1_Update = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.txt_Surname_Update = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txt_Name_Update = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_New_Registry = new System.Windows.Forms.Button();
+            this.btn_Update = new System.Windows.Forms.Button();
+            this.btn_Delete = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -77,7 +79,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.lst_liste);
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(11, 10);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
@@ -85,55 +89,60 @@
             this.groupBox1.Size = new System.Drawing.Size(361, 606);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Liste";
             // 
             // lst_liste
             // 
+            this.lst_liste.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.lst_liste.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lst_liste.ForeColor = System.Drawing.Color.Black;
             this.lst_liste.FormattingEnabled = true;
-            this.lst_liste.ItemHeight = 16;
+            this.lst_liste.ItemHeight = 20;
             this.lst_liste.Location = new System.Drawing.Point(5, 15);
             this.lst_liste.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lst_liste.Name = "lst_liste";
-            this.lst_liste.Size = new System.Drawing.Size(351, 580);
+            this.lst_liste.Size = new System.Drawing.Size(350, 584);
             this.lst_liste.TabIndex = 0;
+            this.lst_liste.DoubleClick += new System.EventHandler(this.lst_liste_DoubleClick);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.txt_Email_New);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.txt_Description_New);
+            this.groupBox2.Controls.Add(this.txt_Phone3_New);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.txt_Address_New);
+            this.groupBox2.Controls.Add(this.txt_Phone2_New);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.txt_WebAddress_New);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.txt_Phone1_New);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.txt_Surname_New);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txt_Name_New);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(390, 10);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Size = new System.Drawing.Size(804, 258);
-            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Yeni Kayıt Ekleme";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // textBox6
+            // txt_Email_New
             // 
-            this.textBox6.Location = new System.Drawing.Point(123, 88);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(305, 22);
-            this.textBox6.TabIndex = 1;
+            this.txt_Email_New.Location = new System.Drawing.Point(123, 88);
+            this.txt_Email_New.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Email_New.Name = "txt_Email_New";
+            this.txt_Email_New.Size = new System.Drawing.Size(305, 22);
+            this.txt_Email_New.TabIndex = 2;
             // 
             // label6
             // 
@@ -141,26 +150,26 @@
             this.label6.Location = new System.Drawing.Point(5, 90);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 16);
-            this.label6.TabIndex = 0;
+            this.label6.TabIndex = 5;
             this.label6.Text = "Email";
             // 
-            // textBox9
+            // txt_Description_New
             // 
-            this.textBox9.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox9.Location = new System.Drawing.Point(123, 182);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(677, 72);
-            this.textBox9.TabIndex = 1;
+            this.txt_Description_New.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_Description_New.Location = new System.Drawing.Point(123, 182);
+            this.txt_Description_New.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Description_New.Multiline = true;
+            this.txt_Description_New.Name = "txt_Description_New";
+            this.txt_Description_New.Size = new System.Drawing.Size(677, 72);
+            this.txt_Description_New.TabIndex = 8;
             // 
-            // textBox5
+            // txt_Phone3_New
             // 
-            this.textBox5.Location = new System.Drawing.Point(568, 90);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(232, 22);
-            this.textBox5.TabIndex = 1;
+            this.txt_Phone3_New.Location = new System.Drawing.Point(568, 90);
+            this.txt_Phone3_New.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Phone3_New.Name = "txt_Phone3_New";
+            this.txt_Phone3_New.Size = new System.Drawing.Size(232, 22);
+            this.txt_Phone3_New.TabIndex = 5;
             // 
             // label9
             // 
@@ -180,22 +189,22 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Telefon Numarası 3";
             // 
-            // textBox8
+            // txt_Address_New
             // 
-            this.textBox8.Location = new System.Drawing.Point(123, 156);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(677, 22);
-            this.textBox8.TabIndex = 1;
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            this.txt_Address_New.Location = new System.Drawing.Point(123, 156);
+            this.txt_Address_New.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Address_New.Name = "txt_Address_New";
+            this.txt_Address_New.Size = new System.Drawing.Size(677, 22);
+            this.txt_Address_New.TabIndex = 7;
+            this.txt_Address_New.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
-            // textBox4
+            // txt_Phone2_New
             // 
-            this.textBox4.Location = new System.Drawing.Point(568, 64);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(232, 22);
-            this.textBox4.TabIndex = 1;
+            this.txt_Phone2_New.Location = new System.Drawing.Point(568, 64);
+            this.txt_Phone2_New.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Phone2_New.Name = "txt_Phone2_New";
+            this.txt_Phone2_New.Size = new System.Drawing.Size(232, 22);
+            this.txt_Phone2_New.TabIndex = 4;
             // 
             // label8
             // 
@@ -206,13 +215,13 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Adres";
             // 
-            // textBox7
+            // txt_WebAddress_New
             // 
-            this.textBox7.Location = new System.Drawing.Point(123, 128);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(677, 22);
-            this.textBox7.TabIndex = 1;
+            this.txt_WebAddress_New.Location = new System.Drawing.Point(123, 128);
+            this.txt_WebAddress_New.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_WebAddress_New.Name = "txt_WebAddress_New";
+            this.txt_WebAddress_New.Size = new System.Drawing.Size(677, 22);
+            this.txt_WebAddress_New.TabIndex = 6;
             // 
             // label4
             // 
@@ -232,13 +241,13 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Web Adres";
             // 
-            // textBox3
+            // txt_Phone1_New
             // 
-            this.textBox3.Location = new System.Drawing.Point(568, 38);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(232, 22);
-            this.textBox3.TabIndex = 1;
+            this.txt_Phone1_New.Location = new System.Drawing.Point(568, 38);
+            this.txt_Phone1_New.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Phone1_New.Name = "txt_Phone1_New";
+            this.txt_Phone1_New.Size = new System.Drawing.Size(232, 22);
+            this.txt_Phone1_New.TabIndex = 3;
             // 
             // label3
             // 
@@ -249,13 +258,13 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Telefon Numarası 1";
             // 
-            // textBox2
+            // txt_Surname_New
             // 
-            this.textBox2.Location = new System.Drawing.Point(123, 62);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(305, 22);
-            this.textBox2.TabIndex = 1;
+            this.txt_Surname_New.Location = new System.Drawing.Point(123, 62);
+            this.txt_Surname_New.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Surname_New.Name = "txt_Surname_New";
+            this.txt_Surname_New.Size = new System.Drawing.Size(305, 22);
+            this.txt_Surname_New.TabIndex = 1;
             // 
             // label2
             // 
@@ -263,16 +272,16 @@
             this.label2.Location = new System.Drawing.Point(5, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 16);
-            this.label2.TabIndex = 0;
+            this.label2.TabIndex = 1;
             this.label2.Text = "Soyisim";
             // 
-            // textBox1
+            // txt_Name_New
             // 
-            this.textBox1.Location = new System.Drawing.Point(123, 37);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 22);
-            this.textBox1.TabIndex = 1;
+            this.txt_Name_New.Location = new System.Drawing.Point(123, 37);
+            this.txt_Name_New.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Name_New.Name = "txt_Name_New";
+            this.txt_Name_New.Size = new System.Drawing.Size(305, 22);
+            this.txt_Name_New.TabIndex = 0;
             // 
             // label1
             // 
@@ -285,23 +294,24 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox10);
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.txt_Email_Update);
             this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.textBox11);
-            this.groupBox3.Controls.Add(this.textBox12);
+            this.groupBox3.Controls.Add(this.txt_Description_Update);
+            this.groupBox3.Controls.Add(this.txt_Phone3_Update);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.textBox13);
-            this.groupBox3.Controls.Add(this.textBox14);
+            this.groupBox3.Controls.Add(this.txt_Address_Update);
+            this.groupBox3.Controls.Add(this.txt_Phone2_Update);
             this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.textBox15);
+            this.groupBox3.Controls.Add(this.txt_WebAddress_Update);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.textBox16);
+            this.groupBox3.Controls.Add(this.txt_Phone1_Update);
             this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.textBox17);
+            this.groupBox3.Controls.Add(this.txt_Surname_Update);
             this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.textBox18);
+            this.groupBox3.Controls.Add(this.txt_Name_Update);
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Location = new System.Drawing.Point(390, 310);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -312,13 +322,13 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Seçili Olan Kaydı Sil / Güncelle";
             // 
-            // textBox10
+            // txt_Email_Update
             // 
-            this.textBox10.Location = new System.Drawing.Point(123, 74);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(305, 22);
-            this.textBox10.TabIndex = 19;
+            this.txt_Email_Update.Location = new System.Drawing.Point(123, 74);
+            this.txt_Email_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Email_Update.Name = "txt_Email_Update";
+            this.txt_Email_Update.Size = new System.Drawing.Size(305, 22);
+            this.txt_Email_Update.TabIndex = 2;
             // 
             // label10
             // 
@@ -329,22 +339,22 @@
             this.label10.TabIndex = 9;
             this.label10.Text = "Email";
             // 
-            // textBox11
+            // txt_Description_Update
             // 
-            this.textBox11.Location = new System.Drawing.Point(123, 168);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(677, 72);
-            this.textBox11.TabIndex = 17;
+            this.txt_Description_Update.Location = new System.Drawing.Point(123, 168);
+            this.txt_Description_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Description_Update.Multiline = true;
+            this.txt_Description_Update.Name = "txt_Description_Update";
+            this.txt_Description_Update.Size = new System.Drawing.Size(677, 72);
+            this.txt_Description_Update.TabIndex = 8;
             // 
-            // textBox12
+            // txt_Phone3_Update
             // 
-            this.textBox12.Location = new System.Drawing.Point(568, 76);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(232, 22);
-            this.textBox12.TabIndex = 15;
+            this.txt_Phone3_Update.Location = new System.Drawing.Point(568, 76);
+            this.txt_Phone3_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Phone3_Update.Name = "txt_Phone3_Update";
+            this.txt_Phone3_Update.Size = new System.Drawing.Size(232, 22);
+            this.txt_Phone3_Update.TabIndex = 5;
             // 
             // label11
             // 
@@ -364,21 +374,21 @@
             this.label12.TabIndex = 10;
             this.label12.Text = "Telefon Numarası 3";
             // 
-            // textBox13
+            // txt_Address_Update
             // 
-            this.textBox13.Location = new System.Drawing.Point(123, 142);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(677, 22);
-            this.textBox13.TabIndex = 11;
+            this.txt_Address_Update.Location = new System.Drawing.Point(123, 142);
+            this.txt_Address_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Address_Update.Name = "txt_Address_Update";
+            this.txt_Address_Update.Size = new System.Drawing.Size(677, 22);
+            this.txt_Address_Update.TabIndex = 7;
             // 
-            // textBox14
+            // txt_Phone2_Update
             // 
-            this.textBox14.Location = new System.Drawing.Point(568, 50);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(232, 22);
-            this.textBox14.TabIndex = 12;
+            this.txt_Phone2_Update.Location = new System.Drawing.Point(568, 50);
+            this.txt_Phone2_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Phone2_Update.Name = "txt_Phone2_Update";
+            this.txt_Phone2_Update.Size = new System.Drawing.Size(232, 22);
+            this.txt_Phone2_Update.TabIndex = 4;
             // 
             // label13
             // 
@@ -389,13 +399,13 @@
             this.label13.TabIndex = 2;
             this.label13.Text = "Adres";
             // 
-            // textBox15
+            // txt_WebAddress_Update
             // 
-            this.textBox15.Location = new System.Drawing.Point(123, 114);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(677, 22);
-            this.textBox15.TabIndex = 14;
+            this.txt_WebAddress_Update.Location = new System.Drawing.Point(123, 114);
+            this.txt_WebAddress_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_WebAddress_Update.Name = "txt_WebAddress_Update";
+            this.txt_WebAddress_Update.Size = new System.Drawing.Size(677, 22);
+            this.txt_WebAddress_Update.TabIndex = 6;
             // 
             // label14
             // 
@@ -415,13 +425,13 @@
             this.label15.TabIndex = 5;
             this.label15.Text = "Web Adres";
             // 
-            // textBox16
+            // txt_Phone1_Update
             // 
-            this.textBox16.Location = new System.Drawing.Point(568, 24);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(232, 22);
-            this.textBox16.TabIndex = 16;
+            this.txt_Phone1_Update.Location = new System.Drawing.Point(568, 24);
+            this.txt_Phone1_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Phone1_Update.Name = "txt_Phone1_Update";
+            this.txt_Phone1_Update.Size = new System.Drawing.Size(232, 22);
+            this.txt_Phone1_Update.TabIndex = 3;
             // 
             // label16
             // 
@@ -432,13 +442,13 @@
             this.label16.TabIndex = 4;
             this.label16.Text = "Telefon Numarası 1";
             // 
-            // textBox17
+            // txt_Surname_Update
             // 
-            this.textBox17.Location = new System.Drawing.Point(123, 49);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(305, 22);
-            this.textBox17.TabIndex = 18;
+            this.txt_Surname_Update.Location = new System.Drawing.Point(123, 49);
+            this.txt_Surname_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Surname_Update.Name = "txt_Surname_Update";
+            this.txt_Surname_Update.Size = new System.Drawing.Size(305, 22);
+            this.txt_Surname_Update.TabIndex = 1;
             // 
             // label17
             // 
@@ -449,13 +459,13 @@
             this.label17.TabIndex = 3;
             this.label17.Text = "Soyisim";
             // 
-            // textBox18
+            // txt_Name_Update
             // 
-            this.textBox18.Location = new System.Drawing.Point(123, 23);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(305, 22);
-            this.textBox18.TabIndex = 13;
+            this.txt_Name_Update.Location = new System.Drawing.Point(123, 23);
+            this.txt_Name_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Name_Update.Name = "txt_Name_Update";
+            this.txt_Name_Update.Size = new System.Drawing.Size(305, 22);
+            this.txt_Name_Update.TabIndex = 0;
             // 
             // label18
             // 
@@ -466,33 +476,57 @@
             this.label18.TabIndex = 7;
             this.label18.Text = "İsim";
             // 
-            // button1
+            // btn_New_Registry
             // 
-            this.button1.Location = new System.Drawing.Point(390, 270);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(804, 38);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_New_Registry.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btn_New_Registry.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_New_Registry.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_New_Registry.Location = new System.Drawing.Point(390, 270);
+            this.btn_New_Registry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_New_Registry.Name = "btn_New_Registry";
+            this.btn_New_Registry.Size = new System.Drawing.Size(804, 38);
+            this.btn_New_Registry.TabIndex = 1;
+            this.btn_New_Registry.Text = "Yeni Kayıt Ekle";
+            this.btn_New_Registry.UseVisualStyleBackColor = false;
+            this.btn_New_Registry.Click += new System.EventHandler(this.btn_New_Registry_Click);
             // 
-            // button2
+            // btn_Update
             // 
-            this.button2.Location = new System.Drawing.Point(390, 578);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(804, 38);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Update.BackColor = System.Drawing.Color.Goldenrod;
+            this.btn_Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Update.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Update.Location = new System.Drawing.Point(390, 578);
+            this.btn_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Update.Name = "btn_Update";
+            this.btn_Update.Size = new System.Drawing.Size(393, 38);
+            this.btn_Update.TabIndex = 2;
+            this.btn_Update.Text = "Güncelle";
+            this.btn_Update.UseVisualStyleBackColor = false;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
+            // 
+            // btn_Delete
+            // 
+            this.btn_Delete.BackColor = System.Drawing.Color.OrangeRed;
+            this.btn_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Delete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Delete.Location = new System.Drawing.Point(797, 578);
+            this.btn_Delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(393, 38);
+            this.btn_Delete.TabIndex = 3;
+            this.btn_Delete.Text = "Kayıt Sil";
+            this.btn_Delete.UseVisualStyleBackColor = false;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // AnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1231, 661);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1231, 634);
+            this.Controls.Add(this.btn_Delete);
+            this.Controls.Add(this.btn_Update);
+            this.Controls.Add(this.btn_New_Registry);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -501,6 +535,7 @@
             this.Name = "AnaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Telefon Rehberi Uygulaması";
+            this.Load += new System.EventHandler(this.AnaForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -515,44 +550,45 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox lst_liste;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txt_Email_New;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_Phone3_New;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_Phone2_New;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_Phone1_New;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_Surname_New;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Name_New;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txt_Description_New;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txt_Address_New;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txt_WebAddress_New;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txt_Email_Update;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txt_Description_Update;
+        private System.Windows.Forms.TextBox txt_Phone3_Update;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txt_Address_Update;
+        private System.Windows.Forms.TextBox txt_Phone2_Update;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox txt_WebAddress_Update;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox txt_Phone1_Update;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox txt_Surname_Update;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txt_Name_Update;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_New_Registry;
+        private System.Windows.Forms.Button btn_Update;
+        private System.Windows.Forms.Button btn_Delete;
     }
 }
